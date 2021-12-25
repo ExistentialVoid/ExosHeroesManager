@@ -1,0 +1,79 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <StartupObject>ExosHeroesManager.App</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\AddEquipmentIcon.png" />
+    <None Remove="Resources\BreakerSetIcon.png" />
+    <None Remove="Resources\ClearEquipmentIcon.png" />
+    <None Remove="Resources\CriticalSetIcon.png" />
+    <None Remove="Resources\DashSetIcon.png" />
+    <None Remove="Resources\DestructionSetIcon.png" />
+    <None Remove="Resources\FortificationSetIcon.png" />
+    <None Remove="Resources\HasExclusiveIcon.png" />
+    <None Remove="Resources\ManaDropIcon.png" />
+    <None Remove="Resources\NoExclusiveIcon.png" />
+    <None Remove="Resources\RedBloodSetIcon.png" />
+    <None Remove="Resources\ResistanceSetIcon.png" />
+    <None Remove="Resources\RetaliationSetIcon.png" />
+    <None Remove="Resources\SelectEquipmentIcon.png" />
+    <None Remove="Resources\SniperSetIcon.png" />
+    <None Remove="Resources\VitalitySetIcon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+    <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
+    <PackageReference Include="System.Resources.ResourceManager" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="HeroImages.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>HeroImages.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Icons.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Icons.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="HeroImages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>HeroImages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Icons.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Icons.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\AddEquipmentIcon.png" />
+    <Resource Include="Resources\BreakerSetIcon.png" />
+    <Resource Include="Resources\ClearEquipmentIcon.png" />
+    <Resource Include="Resources\CriticalSetIcon.png" />
+    <Resource Include="Resources\DashSetIcon.png" />
+    <Resource Include="Resources\DestructionSetIcon.png" />
+    <Resource Include="Resources\FortificationSetIcon.png" />
+    <Resource Include="Resources\HasExclusiveIcon.png" />
+    <Resource Include="Resources\ManaDropIcon.png" />
+    <Resource Include="Resources\NoExclusiveIcon.png" />
+    <Resource Include="Resources\RedBloodSetIcon.png" />
+    <Resource Include="Resources\ResistanceSetIcon.png" />
+    <Resource Include="Resources\RetaliationSetIcon.png" />
+    <Resource Include="Resources\SelectEquipmentIcon.png" />
+    <Resource Include="Resources\SniperSetIcon.png" />
+    <Resource Include="Resources\VitalitySetIcon.png" />
+  </ItemGroup>
+
+</Project>

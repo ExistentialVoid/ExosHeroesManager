@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="ExosHeroesManager.CustomControls.SetEffectMosaic"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:converters="clr-namespace:ExosHeroesManager.Converters"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="200" x:Name="main">
+    <UserControl.Resources>
+        <converters:WidthToEllipseCenterConverter x:Key="widthToCenter"/>
+        <converters:WidthToRadiusConverter x:Key="widthToRadius"/>
+    </UserControl.Resources>
+
+    <Grid Width="{Binding ElementName=main, Path=Width}" Height="{Binding ElementName=main, Path=Height}">
+        <Grid.Clip>
+            <EllipseGeometry Center="{Binding ElementName=main, Path=Width, Converter={StaticResource widthToCenter}}" RadiusX="{Binding ElementName=main, Path=Width, Converter={StaticResource widthToRadius}}" RadiusY="{Binding ElementName=main, Path=Height, Converter={StaticResource widthToRadius}}"/>
+        </Grid.Clip>
+        <Canvas>
+            <Button x:Name="BreakerButton" Click="BreakerButton_Click" Width="{Binding ElementName=main, Path=ButtonWidth}" Height="{Binding ElementName=main, Path=ButtonHeight}" Clip="{Binding ElementName=main, Path=ButtonGeometry}">
+                <Image Source="pack://application:,,,/Resources/BreakerSetIcon.png"/>
+            </Button>
+            <Button x:Name="FortificationButton" Click="FortificationButton_Click" Width="{Binding ElementName=main, Path=ButtonWidth}" Height="{Binding ElementName=main, Path=ButtonHeight}" Clip="{Binding ElementName=main, Path=ButtonGeometry}">
+                <Image Source="pack://application:,,,/Resources/FortificationSetIcon.png"/>
+            </Button>
+            <Button x:Name="VitalityButton" Click="VitalityButton_Click" Width="{Binding ElementName=main, Path=ButtonWidth}" Height="{Binding ElementName=main, Path=ButtonHeight}" Clip="{Binding ElementName=main, Path=ButtonGeometry}">
+                <Image Source="pack://application:,,,/Resources/VitalitySetIcon.png"/>
+            </Button>
+            <Button x:Name="CriticalButton" Click="CriticalButton_Click" Width="{Binding ElementName=main, Path=ButtonWidth}" Height="{Binding ElementName=main, Path=ButtonHeight}" Clip="{Binding ElementName=main, Path=ButtonGeometry}">
+                <Image Source="pack://application:,,,/Resources/CriticalSetIcon.png"/>
+            </Button>
+            <Button x:Name="DashButton" Click="DashButton_Click" Width="{Binding ElementName=main, Path=ButtonWidth}" Height="{Binding ElementName=main, Path=ButtonHeight}" Clip="{Binding ElementName=main, Path=ButtonGeometry}">
+                <Image Source="pack://application:,,,/Resources/DashSetIcon.png"/>
+            </Button>
+            <Button x:Name="SniperButton" Click="SniperButton_Click" Width="{Binding ElementName=main, Path=ButtonWidth}" Height="{Binding ElementName=main, Path=ButtonHeight}" Clip="{Binding ElementName=main, Path=ButtonGeometry}">
+                <Image Source="pack://application:,,,/Resources/SniperSetIcon.png"/>
+            </Button>
+            <Button x:Name="DestructionButton" Click="DestructionButton_Click" Width="{Binding ElementName=main, Path=ButtonWidth}" Height="{Binding ElementName=main, Path=ButtonHeight}" Clip="{Binding ElementName=main, Path=ButtonGeometry}">
+                <Image Source="pack://application:,,,/Resources/DestructionSetIcon.png"/>
+            </Button>
+            <Button x:Name="RedBloodButton" Click="RedBloodButton_Click" Width="{Binding ElementName=main, Path=ButtonWidth}" Height="{Binding ElementName=main, Path=ButtonHeight}" Clip="{Binding ElementName=main, Path=ButtonGeometry}">
+                <Image Source="pack://application:,,,/Resources/RedBloodSetIcon.png"/>
+            </Button>
+            <Button x:Name="ResistanceButton" Click="ResistanceButton_Click" Width="{Binding ElementName=main, Path=ButtonWidth}" Height="{Binding ElementName=main, Path=ButtonHeight}" Clip="{Binding ElementName=main, Path=ButtonGeometry}">
+                <Image Source="pack://application:,,,/Resources/ResistanceSetIcon.png"/>
+            </Button>
+            <Button x:Name="RetaliationButton" Click="RetaliationButton_Click" Width="{Binding ElementName=main, Path=ButtonWidth}" Height="{Binding ElementName=main, Path=ButtonHeight}" Clip="{Binding ElementName=main, Path=ButtonGeometry}">
+                <Image Source="pack://application:,,,/Resources/RetaliationSetIcon.png"/>
+            </Button>
+        </Canvas>
+    </Grid>
+</UserControl>

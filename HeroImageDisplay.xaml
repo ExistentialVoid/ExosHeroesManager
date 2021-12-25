@@ -1,0 +1,16 @@
+﻿<Window x:Class="ExosHeroesManager.HeroImageDisplay"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExosHeroesManager"
+        xmlns:converters="clr-namespace:ExosHeroesManager.Converters"
+        mc:Ignorable="d"
+        Title="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Hero.Name}" SizeToContent="WidthAndHeight" ShowInTaskbar="False" WindowStyle="ToolWindow" 
+        Deactivated="Window_Deactivated" MouseDown="Window_MouseDown">
+    <Grid>
+        <Viewbox>
+            <Image x:Name="Image"/>
+        </Viewbox>
+    </Grid>
+</Window>
